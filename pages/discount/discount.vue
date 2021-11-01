@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		discount page
 	</view>
 </template>
 

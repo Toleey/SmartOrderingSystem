@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		Address Page
 	</view>
 </template>
 

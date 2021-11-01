@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		Code Page
 	</view>
 </template>
 

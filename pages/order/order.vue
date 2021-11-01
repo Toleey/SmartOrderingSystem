@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		<strong> Order Page </strong>
 	</view>
 </template>
 
@@ -17,6 +17,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+
 
 </style>

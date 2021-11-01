@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		redeem page
 	</view>
 </template>
 
