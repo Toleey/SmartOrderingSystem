@@ -1,0 +1,1 @@
+<view><view class="avator_Box"><view class="avator"><image src="{{avator_src}}"></image></view></view><button data-event-opts="{{[['tap',[['setAvator',['$event']]]]]}}" bindtap="__e">更换头像</button></view>

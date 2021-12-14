@@ -9,6 +9,8 @@
 		
 		<button @click="setAvator">更换头像</button>
 		
+		<button @click="toReLogin">退出登录</button>
+		
 	</view>
 </template>
 
@@ -23,6 +25,11 @@
 			this.getAvator()
 		},
 		methods: {
+			toReLogin(){
+				uni.redirectTo({
+					url:"../login/login"
+				})
+			},
 			getAvator(){
 				uni.request({
 					url:"http://localhost:8088/user/getAvatorSrc",

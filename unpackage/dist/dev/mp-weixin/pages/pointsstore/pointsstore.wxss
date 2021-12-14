@@ -1,0 +1,8 @@
+
+.headBox{
+	background-color: #FC2C07;
+	width: 750rpx;
+	height: 250rpx;
+}
+
+

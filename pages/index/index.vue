@@ -1,14 +1,14 @@
 <template>
 	<view class="content">
-		
+
 		<view class="carousel_img">
-			<swiper circular="true" autoplay="true"> 
+			<swiper circular="true" autoplay="true">
 				<swiper-item v-for="(img,i) in carouselList" :key="i">
 					<image :src="img.url"></image>
 				</swiper-item>
 			</swiper>
 		</view>
-		
+
 		<view class="orderBox" @click="toFood()">
 			<view class="orderBox_left">
 				<view class="orderBox_left_words01">到店自取</view>
@@ -18,10 +18,11 @@
 				<image src="../../static/pic/orderBox_logo.png"></image>
 			</view>
 		</view>
-		
+
 		<view class="chooseBox">
 			<view class="prd_Content">
-				<view class="prd" @click="toPointsStore()"><!-- points redeem discount -->
+				<view class="prd" @click="toPointsStore()">
+					<!-- points redeem discount -->
 					<view class="prdBox">
 						<view class="prdBox_title">
 							积分商城
@@ -81,8 +82,8 @@
 				</view>
 			</view>
 		</view>
-		
-		
+
+
 	</view>
 </template>
 
@@ -90,11 +91,18 @@
 	export default {
 		data() {
 			return {
-				carouselList:[
-					{url:"https://www.mxbc.com/media/upload/index/%E4%B8%BB%E9%A1%B5banner1920x900--2_1.jpg"},
-					{url:"https://www.mxbc.com/media/upload/index/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8Ebanner1920x900.jpg"},
-					{url:"https://www.mxbc.com/media/upload/index/%E4%B8%BB%E9%A1%B5banner1920x900--2_1.jpg"},
-					{url:"https://www.mxbc.com/media/upload/index/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8Ebanner1920x900.jpg"},
+				carouselList: [{
+						url: "https://www.mxbc.com/media/upload/index/%E4%B8%BB%E9%A1%B5banner1920x900--2_1.jpg"
+					},
+					{
+						url: "https://www.mxbc.com/media/upload/index/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8Ebanner1920x900.jpg"
+					},
+					{
+						url: "https://www.mxbc.com/media/upload/index/%E4%B8%BB%E9%A1%B5banner1920x900--2_1.jpg"
+					},
+					{
+						url: "https://www.mxbc.com/media/upload/index/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8Ebanner1920x900.jpg"
+					},
 				]
 			}
 		},
@@ -102,32 +110,32 @@
 
 		},
 		methods: {
-			toFood(){
+			toFood() {
 				uni.switchTab({
-					url:"../food/food"
+					url: "../food/food"
 				})
 			},
-			toPointsStore(){
+			toPointsStore() {
 				uni.navigateTo({
-					url:"../pointsstore/pointsstore"
+					url: "../pointsstore/pointsstore"
 				})
 			},
-			toRedeem(){
+			toRedeem() {
 				uni.navigateTo({
-					url:"../redeem/redeem"
+					url: "../redeem/redeem"
 				})
 			},
-			toDiscount(){
+			toDiscount() {
 				uni.navigateTo({
-					url:"../discount/discount"
+					url: "../discount/discount"
 				})
 			},
-			async getAllCarousels(){
+			async getAllCarousels() {
 				// const res = await this $myRequest({
-					
+
 				// })
 			}
-			
+
 		}
 	}
 </script>
@@ -135,22 +143,25 @@
 <style lang="scss">
 	.content {
 		margin-bottom: 30rpx;
-		.carousel_img{
+
+		.carousel_img {
+
 			// border: 1px solid black;
 			// height: 500rpx;
 			// background-color: orange;
-			swiper{
+			swiper {
 				width: 750rpx;
 				height: 500rpx;
-				
-				image{
+
+				image {
 					width: 100%;
 					height: 100%;
 				}
 			}
 		}
-		.orderBox{
-			box-shadow:0 6px 9px 3px #DFDFDF;
+
+		.orderBox {
+			box-shadow: 0 6px 9px 3px #DFDFDF;
 			margin: -40rpx auto;
 			// border: 1px solid black;
 			width: 700rpx;
@@ -163,8 +174,8 @@
 			flex-flow: row nowrap;
 			justify-content: space-between;
 			align-items: center;
-			
-			.orderBox_left{
+
+			.orderBox_left {
 				// border: 1px solid black;
 				height: 400rpx;
 				width: 350rpx;
@@ -172,57 +183,58 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				flex-flow: column nowrap; 
-				border-right:1px solid #ECECEC ;
-				
-				.orderBox_left_words01{
+				flex-flow: column nowrap;
+				border-right: 1px solid #ECECEC;
+
+				.orderBox_left_words01 {
 					color: #2C2C2C;
 					font-weight: bold;
 					font-size: 50rpx;
 				}
-				.orderBox_left_words02{
+
+				.orderBox_left_words02 {
 					color: #B5B5B5;
 					font-size: 26rpx;
 				}
-				
+
 			}
-			
-			.orderBox_right{
+
+			.orderBox_right {
 				// border: 1px solid black;
 				height: 400rpx;
 				width: 350rpx;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				
-				image{
+
+				image {
 					height: 350rpx;
 					width: 350rpx;
 				}
 			}
-			
+
 		}
-		
-		.chooseBox{
+
+		.chooseBox {
 			// margin-top:40rpx ;
-			margin-top:80rpx ;
+			margin-top: 80rpx;
 			// border: 1px solid black;
 			width: 750rpx;
 			// height: 800rpx;
 			display: flex;
 			flex-flow: row nowrap;
-			
-			.prd_Content{
+
+			.prd_Content {
 				// border: 1px solid black;
 				margin: 0 auto;
 				width: 700rpx;
 				display: flex;
 				flex-flow: row nowrap;
-				
-				
-				.prd{
+
+
+				.prd {
 					margin: 0 auto;
-					box-shadow:0 0 9px 3px #DFDFDF;
+					box-shadow: 0 0 9px 3px #DFDFDF;
 					// border: 1px solid black;
 					width: 220rpx;
 					height: 300rpx;
@@ -231,8 +243,8 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					
-					.prdBox{
+
+					.prdBox {
 						// border: 1px solid black;
 						width: 200rpx;
 						height: 200rpx;
@@ -240,8 +252,8 @@
 						flex-flow: column nowrap;
 						justify-content: center;
 						align-items: center;
-						
-						.prdBox_title{
+
+						.prdBox_title {
 							// border: 1px solid black;
 							width: 200rpx;
 							height: 60rpx;
@@ -249,38 +261,42 @@
 							font-weight: bold;
 							font-size: 36rpx;
 						}
-						.prdBox_subtitle{
+
+						.prdBox_subtitle {
 							// border: 1px solid black;
 							width: 200rpx;
 							height: 40rpx;
 							text-align: center;
 							font-size: 20rpx;
 							color: #9F9F9F;
+
 						}
-						.prdBox_icon{
+
+						.prdBox_icon {
 							// border: 1px solid black;
 							width: 200rpx;
 							height: 100rpx;
 							display: flex;
 							justify-content: center;
 							align-items: center;
-							span{
+
+							span {
 								font-size: 50rpx;
 								font-weight: bold;
 							}
 						}
-						
-					}
-					
-				}
-				
-			}
-			
 
-			
+					}
+
+				}
+
+			}
+
+
+
 		}
-		
-		.myPoints{
+
+		.myPoints {
 			// border: 1px solid black;
 			width: 750rpx;
 			height: 300rpx;
@@ -288,48 +304,49 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			
-			.myPointsBox{
-				box-shadow:0 0 9px 3px #DFDFDF; //#EFEFEF
+
+			.myPointsBox {
+				box-shadow: 0 0 9px 3px #DFDFDF; //#EFEFEF
 				// border: 1px solid black;
 				width: 700rpx;
 				height: 300rpx;
 				border-radius: 5%;
 				display: flex;
 				flex-flow: row nowrap;
-				
-				.myPointsBox_left{
+
+				.myPointsBox_left {
 					// border: 1px solid black;
 					width: 470rpx; //500rpx
 					height: 300rpx;
 					border-radius: 5%;
 					margin-left: 30rpx;
-					
+
 					display: flex;
 					flex-flow: column nowrap;
 					justify-content: center;
 					// align-items: center;
-					
-					.myPointsBox_title{
+
+					.myPointsBox_title {
 						// border: 1px solid black;
 						color: #262626;
-						
-						
-						.myPointsBox_title_num{
+
+
+						.myPointsBox_title_num {
 							color: red;
 							font-size: 50rpx;
 							margin-left: 10rpx;
 						}
-						
+
 					}
-					.myPointsBox_subtitle{
+
+					.myPointsBox_subtitle {
 						// border: 1px solid black;
 						color: #878787;
 					}
-					
+
 				}
-				
-				.myPointsBox_right{
+
+				.myPointsBox_right {
 					// border: 1px solid black;
 					width: 200rpx;
 					height: 300rpx;
@@ -337,20 +354,18 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					
-					span{
+
+					span {
 						font-size: 100rpx;
 						font-weight: bold;
 					}
-					
-				}
-				
-				
-			}
-			
-		}
-		
-	}
 
-	
+				}
+
+
+			}
+
+		}
+
+	}
 </style>

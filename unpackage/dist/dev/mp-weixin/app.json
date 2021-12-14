@@ -1,0 +1,60 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/food/food",
+        "pages/order/order",
+        "pages/my/my",
+        "pages/pointsstore/pointsstore",
+        "pages/redeem/redeem",
+        "pages/discount/discount",
+        "pages/privacy/privacy",
+        "pages/level/level",
+        "pages/code/code",
+        "pages/address/address",
+        "pages/invite/invite",
+        "pages/information/information",
+        "pages/food2/food2",
+        "pages/settlement/settlement",
+        "pages/fetchmeal/fetchmeal",
+        "pages/login/login"
+    ],
+    "subPackages": [],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "color": "#333333",
+        "selectedColor": "#FC2C07",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "static/icon/index.png",
+                "selectedIconPath": "static/icon/index_selected.png"
+            },
+            {
+                "pagePath": "pages/food/food",
+                "text": "点餐",
+                "iconPath": "static/icon/food.png",
+                "selectedIconPath": "static/icon/food_selected.png"
+            },
+            {
+                "pagePath": "pages/order/order",
+                "text": "订单",
+                "iconPath": "static/icon/order.png",
+                "selectedIconPath": "static/icon/order_selected.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "static/icon/my.png",
+                "selectedIconPath": "static/icon/my_selected.png"
+            }
+        ]
+    },
+    "usingComponents": {},
+    "sitemapLocation": "sitemap.json"
+}

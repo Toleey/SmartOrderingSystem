@@ -1,0 +1,1 @@
+<view><view class="item-box"><view class="item"><view class="fm-title">取餐码</view><view class="fm-num">{{this.getCode}}</view></view></view><view><button type="default" data-event-opts="{{[['tap',[['toOrder']]]]}}" bindtap="__e">返回订单页</button></view></view>

@@ -3,6 +3,11 @@ import App from './App'
 import {myRequest} from './util/api.js'
 Vue.prototype.$myRequest=myRequest
 
+//引入store 默认会读index.js
+import store from './store'
+//把Vuex定义成全局组件
+Vue.prototype.$store=store
+
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false

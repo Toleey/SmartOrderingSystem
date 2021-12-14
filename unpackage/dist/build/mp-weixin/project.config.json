@@ -1,0 +1,28 @@
+{
+    "description": "项目配置文件。",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "postcss": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "",
+    "appid": "wxf8d5b0cde720c10f",
+    "projectname": "smartorderingsystem",
+    "condition": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": []
+        }
+    }
+}
